@@ -1,0 +1,14 @@
+:root{
+    user-select: none;
+}
+
+body {
+    color: white;
+    background: #4b2463;
+    overflow-y: hidden;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+button{
+    text-decoration: none;
+}

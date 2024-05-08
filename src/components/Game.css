@@ -1,0 +1,56 @@
+
+body {
+  margin: 0;
+  place-items: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+button{
+  text-decoration: none;
+  text-shadow: black 2px 2px 2px;
+  background: none;
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  border: none;
+  cursor: pointer;
+}
+  
+.strike{
+  text-decoration: line-through;
+}
+
+.close {
+  position: absolute;
+  cursor: pointer;
+  color:white;
+  font-size: larger;
+}
+
+table{
+  width:100vw;
+  height:100vh;
+  text-transform: uppercase;
+  text-align: center;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+th{
+  font-size: 30px;
+  text-shadow: black 2px 2px 2px;
+  text-align: center;
+}
+
+th, td {
+  padding: 10px;
+  border: 8px solid black;
+}
+
+td, button{
+  color: #FFCC00;
+  font-weight: bolder;
+  font-size: 65px;
+}
+
+
+
