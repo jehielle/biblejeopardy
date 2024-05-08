@@ -4,7 +4,10 @@ import ReactDOM from 'react-dom';
 function ModalContent({ onClose }) {
 
   const tableArr =
-    [ 
+  [ 
+      // TODO: save this array in its own file
+      // TODO: add "categoryId" and "category" for each item (eg. { categoryId: 1, category: "who said what" })
+      // TODO: simplify id to numeric 1, 2, 3. etc
       { id: "200-col-1", question: "'I am the light of the world.'", answer: "Jesus" },
       { id: "200-col-2", question: "This person fulfilled a prophecy spoken by Deborah.", answer: "Jael" },
       { id: "200-col-3", question: "", answer: "" },
@@ -41,6 +44,7 @@ function ModalContent({ onClose }) {
       { id: "1000-col-6", question: "", answer: "" }
   ];
 
+  // TODO: these styles should live in a css file instead (see Menu.css)
   const MODAL_STYLES={
     position: 'fixed',
     top: '50%',

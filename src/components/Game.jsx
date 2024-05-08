@@ -21,6 +21,7 @@ function Game() {
     <table>
       <thead>
         <tr>
+          {/* TODO: re-build this list using a forEach loop based on an array of categories */}
           <th>who said what</th>
           <th>prophecies, dreams, miracles</th>
           <th>lesser prophets</th>
@@ -31,6 +32,7 @@ function Game() {
       </thead>
 
       <tbody>
+        {/* TODO: re-build this entire tbody using a forEach loop based on an array of questions */}
         <tr>
           <td>
             <button id="200-col-1" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$200</button>
