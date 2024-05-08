@@ -3,10 +3,11 @@
 }
 
 body {
-    color: white;
     background: #4b2463;
     overflow-y: hidden;
     font-family: "Roboto Condensed", sans-serif;
+    text-align: center;
+    /* padding: 20%; */
 }
 
 button{

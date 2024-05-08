@@ -2,7 +2,10 @@ import './Menu.css'
 
 function Menu() {
   // return (
-  //   <div>Menu</div>
+  //   <>
+  //   <button>Start Game</button>
+  //   Teams Playing:<button>2</button> ((toggle # of teams from 2-4))
+  //   </>
   // )
 }
 

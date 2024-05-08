@@ -53,6 +53,7 @@ function ModalContent({ onClose }) {
     backgroundColor: "#4b2463",
     textAlign: "center",
     fontSize: "70px",
+    color: "white",
   }
 
   const OVERLAY_STYLES = {
