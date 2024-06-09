@@ -13,4 +13,4 @@ Jeopardy game for the congregation
 
 ## Screenshots:
 ![jeopardy](https://github.com/jehielle/biblejeopardy/assets/44626277/e241e1d9-319f-45b0-858b-e16232ec8907)
-![image](https://github.com/jehielle/biblejeopardy/assets/44626277/954777b0-a230-4667-9113-fda687e084ee)
+![image](https://github.com/jehielle/biblejeopardy/assets/44626277/5e83f5af-1515-4676-b44b-3b6346f71a50)
