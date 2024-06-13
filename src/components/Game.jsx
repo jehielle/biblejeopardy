@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './Game.css'
 import ModalContent from './ModalContent';
+import { listHeaders } from './Arrays';
 
 function Game() {
   const [showModal, setShowModal] = useState(false);
@@ -15,18 +16,13 @@ function Game() {
   };
 
 
-
   return (
     <>
     <table>
+
       <thead>
         <tr>
-          <th>who said what</th>
-          <th>prophecies, dreams, miracles</th>
-          <th>lesser prophets</th>
-          <th>kings of judah/israel</th>
-          <th>genealogy</th>
-          <th>fill in the blank</th>
+        { listHeaders }
         </tr>
       </thead>
 
