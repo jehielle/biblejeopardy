@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './Game.css'
 import ModalContent from './ModalContent';
-import { listHeaders } from './Arrays';
+import { ListHeaders } from './ListHeaders';
 
 function Game() {
   const [showModal, setShowModal] = useState(false);
@@ -22,7 +22,7 @@ function Game() {
 
       <thead>
         <tr>
-        { listHeaders }
+        { ListHeaders }
         </tr>
       </thead>
 
