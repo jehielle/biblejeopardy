@@ -1,19 +1,31 @@
 import './ModalContent.css'
 import ReactDOM from 'react-dom';
-import { tableArr } from './Arrays';
+import { teams } from './Arrays';
 
-function ModalContent({ onClose, tableArr }) {
+function ModalContent({ setShowModal, question, dollarVal }) {
 
+  const onCorrectAnswer = () => {
+    addTeamResponse(1, question.id, dollarVal, true);
+    setShowModal(false);
+  }
+
+  const onIncorrectAnswer = () => {
+    addTeamResponse(1, question.id, dollarVal, false);
+    setShowModal(false);
+  }
 
   return ReactDOM.createPortal(
     <>
       <div id="overlay">
         <div id="modal">
-          <button onClick={onClose}>&times;</button>
-          <br></br><br></br>
+          
+          { question.question }
 
-          TEST
-
+          <div id="isCorrect">
+            <button id="correct" onClick={onCorrectAnswer}>Correct</button>
+            <button id="incorrect" onClick={onIncorrectAnswer}>Incorrect</button>
+          </div>
+          
         </div>
       </div>
     </>,
@@ -21,8 +33,10 @@ function ModalContent({ onClose, tableArr }) {
   );
 }
 
+function addTeamResponse(teamId, questionId, dollarVal, isCorrect) {
+  const team = teams.find(t => t.id === teamId);
+  team.questions.push({questionId, dollarVal, isCorrect});
+}
+
 export default ModalContent
 
-// if id="col..." in button == tableArr.id {
-//   { tableArr.question }
-// }
