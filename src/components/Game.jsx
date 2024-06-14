@@ -8,7 +8,7 @@ function Game() {
   const [showModal, setShowModal] = useState(false);
   const [currQuestion, setCurrQuestion] = useState(false);
 
-  const openModal = (question, dollarVal) => {
+  const openModal = (question) => {
     setCurrQuestion(question);
     setShowModal(true);
   };
