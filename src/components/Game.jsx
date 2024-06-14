@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './Game.css'
 import ModalContent from './ModalContent';
 import { ListHeaders } from './ListHeaders';
+import { categoryArr, dollarValArr, tableArr } from './Arrays';
 
 function Game() {
   const [showModal, setShowModal] = useState(false);
@@ -11,7 +12,7 @@ function Game() {
     setStrike(!strike);
   };
 
-  const openModal = () => {
+  const openModal = (dollarValId, categoryId) => {
     setShowModal(true);
   };
 
@@ -22,116 +23,33 @@ function Game() {
 
       <thead>
         <tr>
-        { ListHeaders }
+          <ListHeaders/>
         </tr>
       </thead>
 
       <tbody>
-        <tr>
-          <td>
-            <button id="200-col-1" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$200</button>
-          </td>
-          <td>
-            <button id="200-col-2" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$200</button>
-          </td>
-          <td>
-            <button id="200-col-3" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$200</button>
-          </td>
-          <td>
-            <button id="200-col-4" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$200</button>
-          </td>
-          <td>
-            <button id="200-col-5" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$200</button>
-          </td>
-          <td>
-            <button id="200-col-6" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$200</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <button id="400-col-1" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$400</button>
-          </td>
-          <td>
-            <button id="400-col-2" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$400</button>
-          </td>
-          <td>
-            <button id="400-col-3" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$400</button>
-          </td>
-          <td>
-            <button id="400-col-4" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$400</button>
-          </td>
-          <td>
-            <button id="400-col-5" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$400</button>
-          </td>
-          <td>
-            <button id="400-col-6" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$400</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <button id="600-col-1" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$600</button>
-          </td>
-          <td>
-            <button id="600-col-2" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$600</button>
-          </td>
-          <td>
-            <button id="600-col-3" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$600</button>
-          </td>
-          <td>
-            <button id="600-col-4" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$600</button>
-          </td>
-          <td>
-            <button id="600-col-5" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$600</button>
-          </td>
-          <td>
-            <button id="600-col-6" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$600</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <button id="800-col-1" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$800</button>
-          </td>
-          <td>
-            <button id="800-col-2" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$800</button>
-          </td>
-          <td>
-            <button id="800-col-3" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$800</button>
-          </td>
-          <td>
-            <button id="800-col-4" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$800</button>
-          </td>
-          <td>
-            <button id="800-col-5" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$800</button>
-          </td>
-          <td>
-            <button id="800-col-6" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$800</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <button id="1000-col-1" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$1000</button>
-          </td>
-          <td>
-            <button id="1000-col-2" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$1000</button>
-          </td>
-          <td>
-            <button id="1000-col-3" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$1000</button>
-          </td>
-          <td>
-            <button id="1000-col-4" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$1000</button>
-          </td>
-          <td>
-            <button id="1000-col-5" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$1000</button>
-          </td>
-          <td>
-            <button id="1000-col-6" onClick={openModal} style={{textDecoration: strike ? 'line-through' : 'none'}}>$1000</button>
-          </td>
-        </tr>
+        { dollarValArr.map(dollar => {
+          return (
+            <tr key={dollar.id}>
+              { categoryArr.map(category => {
+                return (
+                  <td key={category.id}>
+                    <button 
+                      id={`${dollar.id}-${category.id}`} 
+                      onClick={() => openModal(dollar.id, category.id)}
+                      style={{textDecoration: strike ? 'line-through' : 'none'}}
+                    >
+                      ${dollar.dollarVal}
+                    </button>
+                  </td>
+                );
+              })}
+            </tr>
+          );
+        })}
       </tbody>
+
+
     </table>
 
     {showModal && (
