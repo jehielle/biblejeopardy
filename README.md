@@ -1,5 +1,9 @@
-# biblejeopardy
+# Bible Jeopardy
+![image](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![image](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+
 Jeopardy game for the congregation
+
 
 ## Features to be implemented:
 * Users can select how many teams are playing
@@ -7,9 +11,7 @@ Jeopardy game for the congregation
 * Multiple rounds for different categories
 * Buzzer
 
-## Built with:
-* [React](https://react.dev/)
-* [Vite](https://github.com/vitejs/vite)
+
 
 ## Screenshots:
 ![jeopardy](https://github.com/jehielle/biblejeopardy/assets/44626277/e241e1d9-319f-45b0-858b-e16232ec8907)
